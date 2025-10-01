@@ -1,0 +1,118 @@
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(16px, 3vw, 28px);
+  font-family: system-ui, sans-serif;
+  color: #1f2937;
+  background: #fff;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.updated {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.card {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: clamp(14px, 2.4vw, 22px);
+  margin: 14px 0;
+}
+
+.lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.subTitle {
+  font-size: clamp(20px, 2.5vw, 26px);
+  margin: 0 0 10px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.text {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 6px 0 10px;
+  color: #374151;
+}
+
+.list {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.listItem {
+  line-height: 1.7;
+  font-size: 0.97rem;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+.contact {
+  line-height: 1.6;
+  font-style: normal;
+  margin-top: 6px;
+}
+
+.contactItem {
+  display: inline-block;
+  margin-bottom: 4px;
+  color: #1f2937;
+  font-size: 0.97rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.backTop {
+  text-decoration: none;
+  background: linear-gradient(135deg, #6a5acd, #20164d);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.backTop:hover {
+  transform: translateY(-5px);
+  opacity: 0.9;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .page {
+    padding-bottom: 56px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .subTitle {
+    font-size: 1.2rem;
+  }
+
+  .backTop {
+    font-size: 0.9rem;
+    padding: 9px 12px;
+  }
+}

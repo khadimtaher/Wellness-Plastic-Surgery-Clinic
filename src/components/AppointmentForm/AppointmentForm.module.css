@@ -1,0 +1,394 @@
+/* Main Wrapper */
+.appointmentWrapper {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: clamp(30px, 5vw, 60px) auto; /* Responsive margin */
+  padding: 0 clamp(10px, 2vw, 20px); /* Responsive padding */
+  gap: clamp(20px, 4vw, 40px);
+  font-family: "Poppins", sans-serif;
+  flex-wrap: wrap;
+}
+
+/* Hospital Info and Form Wrapper */
+/* Hospital Info and Form Wrapper */
+.hospitalInfo {
+  flex: 1; /* equal width */
+  min-width: clamp(280px, 45%, 700px); /* responsive minimum width */
+  max-width: 400px;
+  padding: clamp(15px, 3vw, 20px);
+}
+.formWrapper {
+  flex: 1; /* equal width */
+  min-width: clamp(320px, 50%, 750px); /* thoda bada minimum width */
+  max-width: 600px; /* 400 se bada kiya */
+  padding: clamp(15px, 3vw, 25px); /* thoda aur spacious */
+}
+
+/* Hospital Info */
+.hospitalInfo {
+  background: linear-gradient(135deg, #6b5ecd, #1a104d);
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bubble Pseudo-Elements */
+.hospitalInfo::before,
+.hospitalInfo::after {
+  content: "";
+  position: absolute;
+  width: clamp(150px, 20vw, 300px); /* Limited bubble size */
+  height: clamp(150px, 20vw, 300px);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+  border-radius: 50%;
+  z-index: 0;
+  animation: floatBubble 8s ease-in-out infinite alternate;
+}
+
+.hospitalInfo::before {
+  top: clamp(-20px, -4vw, -40px); /* thoda upar shift */
+  right: clamp(-20px, -4vw, -40px); /* thoda side shift */
+}
+
+.hospitalInfo::after {
+  bottom: clamp(-20px, -4vw, -40px);
+  left: clamp(-20px, -4vw, -40px);
+}
+
+@keyframes floatBubble {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+  to {
+    transform: scale(1.2)
+      translate(clamp(10px, 3vw, 15px), clamp(-10px, -3vw, -15px)); /* Responsive animation */
+  }
+}
+
+/* Ensure content is above bubbles */
+.hospitalInfo h2,
+.hospitalInfo .infoText,
+.hospitalInfo .details {
+  position: relative;
+  z-index: 1;
+}
+
+.hospitalInfo h2 {
+  font-family: "El Messiri", sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.2rem); /* Responsive font size */
+  margin-bottom: clamp(15px, 3vw, 20px);
+  color: #e0ffff;
+}
+
+.infoText {
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  line-height: 1.6;
+  margin-bottom: clamp(15px, 3vw, 20px);
+}
+
+.details p {
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  line-height: 1.8;
+  margin: clamp(5px, 1vw, 8px) 0;
+}
+
+.details strong {
+  font-weight: 600;
+}
+
+/* Form Container */
+.formContainer {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form_heading {
+  font-family: "El Messiri", sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  color: #333;
+  margin-bottom: clamp(15px, 3vw, 20px);
+  text-align: center;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 2vw, 10px);
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: #333;
+  font-weight: 500;
+}
+
+.form input,
+.form textarea {
+  margin-top: clamp(5px, 1vw, 8px);
+  padding: clamp(8px, 2vw, 12px);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-family: "Poppins", sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #25b09b;
+  box-shadow: 0 0 8px rgba(37, 176, 155, 0.3);
+  outline: none;
+}
+
+.form textarea {
+  min-height: clamp(80px, 15vw, 100px);
+  resize: vertical;
+}
+
+.form button {
+  padding: clamp(8px, 2vw, 12px) clamp(14px, 3vw, 20px);
+  background: linear-gradient(90deg, #6b5ecd, #25b09b);
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #25b09b, #6b5ecd);
+}
+
+/* Error Messages */
+.error {
+  color: #e74c3c;
+  font-size: clamp(0.75rem, 2vw, 0.85rem);
+  margin-top: clamp(3px, 1vw, 5px);
+}
+
+/* Response Message */
+.response {
+  margin-top: clamp(15px, 3vw, 20px);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  text-align: center;
+  color: #333;
+}
+
+/* spinner animation ad button  */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid #fff;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  display: inline-block;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .appointmentWrapper {
+    flex-direction: column;
+    gap: clamp(20px, 4vw, 30px);
+    padding: 0 clamp(10px, 2vw, 20px);
+  }
+
+  .hospitalInfo,
+  .formContainer {
+    max-width: 100%;
+  }
+
+  .hospitalInfo::before,
+  .hospitalInfo::after {
+    width: clamp(200px, 35vw, 350px); /* Larger bubbles for medium screens */
+    height: clamp(200px, 35vw, 350px);
+  }
+
+  .hospitalInfo::before {
+    top: clamp(-30px, -5vw, -50px);
+    right: clamp(-30px, -5vw, -50px);
+  }
+
+  .hospitalInfo::after {
+    bottom: clamp(-30px, -5vw, -50px);
+    left: clamp(-30px, -5vw, -50px);
+  }
+}
+
+@media (max-width: 768px) {
+  .appointmentWrapper {
+    margin: clamp(20px, 5vw, 40px) auto;
+    padding: 0 clamp(8px, 2vw, 15px);
+  }
+
+  .hospitalInfo,
+  .formContainer {
+    padding: clamp(12px, 3vw, 20px);
+  }
+
+  .hospitalInfo h2,
+  .form_heading {
+    font-size: clamp(1.6rem, 4vw, 1.8rem);
+  }
+
+  .infoText {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+  }
+
+  .details p {
+    font-size: clamp(0.8rem, 2vw, 0.95rem);
+  }
+
+  .form input,
+  .form textarea {
+    padding: clamp(8px, 2vw, 10px);
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+  }
+
+  .form button {
+    padding: clamp(8px, 2vw, 10px) clamp(12px, 3vw, 16px);
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+  }
+
+  .hospitalInfo::before,
+  .hospitalInfo::after {
+    width: clamp(
+      150px,
+      35vw,
+      250px
+    ); /* Increased bubble size for small screens */
+    height: clamp(150px, 35vw, 250px);
+  }
+
+  .hospitalInfo::before {
+    top: clamp(-20px, -4vw, -30px);
+    right: clamp(-20px, -4vw, -30px);
+  }
+
+  .hospitalInfo::after {
+    bottom: clamp(-20px, -4vw, -30px);
+    left: clamp(-20px, -4vw, -30px);
+  }
+}
+
+@media (max-width: 480px) {
+  .appointmentWrapper {
+    margin: clamp(15px, 5vw, 30px) auto;
+    padding: 0 clamp(5px, 2vw, 10px);
+  }
+
+  .hospitalInfo,
+  .formContainer {
+    padding: clamp(10px, 3vw, 15px);
+  }
+
+  .hospitalInfo h2,
+  .form_heading {
+    font-size: clamp(1.4rem, 4vw, 1.6rem);
+  }
+
+  .infoText {
+    font-size: clamp(0.85rem, 2.5vw, 0.9rem);
+  }
+
+  .details p {
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
+  }
+
+  .form label {
+    font-size: clamp(0.85rem, 2vw, 0.9rem);
+  }
+
+  .form input,
+  .form textarea {
+    padding: clamp(6px, 2vw, 8px);
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+  }
+
+  .form button {
+    padding: clamp(6px, 2vw, 8px) clamp(10px, 3vw, 14px);
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+  }
+
+  .error {
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
+  }
+
+  .response {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+  }
+
+  .hospitalInfo::before,
+  .hospitalInfo::after {
+    width: clamp(
+      120px,
+      30vw,
+      200px
+    ); /* Increased bubble size for very small screens */
+    height: clamp(120px, 30vw, 200px);
+  }
+
+  .hospitalInfo::before {
+    top: clamp(-15px, -3.5vw, -25px);
+    right: clamp(-15px, -3.5vw, -25px);
+  }
+
+  .hospitalInfo::after {
+    bottom: clamp(-15px, -3.5vw, -25px);
+    left: clamp(-15px, -3.5vw, -25px);
+  }
+}
+
+@media (max-width: 320px) {
+  .hospitalInfo::before,
+  .hospitalInfo::after {
+    width: clamp(
+      100px,
+      25vw,
+      150px
+    ); /* Increased bubble size for tiny screens */
+    height: clamp(100px, 25vw, 150px);
+  }
+
+  .hospitalInfo::before {
+    top: clamp(-10px, -3vw, -15px);
+    right: clamp(-10px, -3vw, -15px);
+  }
+
+  .hospitalInfo::after {
+    bottom: clamp(-10px, -3vw, -15px);
+    left: clamp(-10px, -3vw, -15px);
+  }
+
+  @keyframes floatBubble {
+    from {
+      transform: scale(1) translate(0, 0);
+    }
+    to {
+      transform: scale(1.1)
+        translate(clamp(5px, 1.5vw, 8px), clamp(-5px, -1.5vw, -8px)); /* Reduced animation intensity */
+    }
+  }
+}

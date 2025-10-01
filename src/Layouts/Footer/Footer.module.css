@@ -1,0 +1,386 @@
+/* ================= Footer Base ================= */
+.footer {
+  background: linear-gradient(135deg, #6a5acd, #20164d);
+  color: #fff;
+  padding: 60px 20px 30px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Decorative Overlay */
+.footer::before,
+.footer::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 360px;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 188, 212, 0.15),
+    rgba(255, 255, 255, 0.05)
+  );
+  border-radius: 50%;
+  z-index: 0;
+  animation: floatBubble 8s ease-in-out infinite alternate;
+}
+
+.footer::before {
+  top: -80px;
+  right: -80px;
+}
+
+.footer::after {
+  bottom: -100px;
+  left: -100px;
+}
+@keyframes floatBubble {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+  to {
+    transform: scale(1.2) translate(15px, -15px);
+  }
+}
+
+/* Container Grid */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Headings */
+.section h2,
+.section h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 20px;
+  border-bottom: 2px solid #00bcd4;
+  display: inline-block;
+  padding-bottom: 6px;
+  font-family: "Libertinus Math", system-ui;
+  letter-spacing: 0.5px;
+}
+
+/* Logo Image */
+.section .LogoImage {
+  width: 10rem;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.section .LogoImage:hover {
+  transform: scale(1.05);
+}
+
+/* Paragraphs */
+.section p {
+  line-height: 1.8;
+  font-size: 14px;
+  color: #ffffff;
+  font-family: "Merriweather", serif;
+}
+
+/* Lists */
+.section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section ul li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.section ul li a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.section ul li a:hover {
+  color: #00bcd4;
+}
+
+.section ul li:hover {
+  transform: translateX(6px);
+}
+
+/* Arrows */
+.section ul li .menusArrow {
+  font-size: 1.2rem;
+  color: #ddd;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.section ul li:hover .menusArrow {
+  color: #00bcd4;
+  transform: translateX(4px);
+}
+
+/* Contact Section */
+.section {
+  margin-top: 20px;
+  padding: 0 16px; /* Add padding for smaller screens */
+}
+
+/* Contact Info */
+.section .contactInformation {
+  padding: 8px 0;
+  font-size: 15px;
+  color: #ddd;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Spacing between icon and text */
+  transition: color 0.3s ease;
+}
+
+.section .contactInformation:hover {
+  cursor: pointer;
+  color: #00bcd4;
+}
+
+.section .contactIcons {
+  font-size: 1.5rem;
+  flex-shrink: 0; /* Prevent icon compression */
+  color: #00bcd4;
+}
+
+.contactLink {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Ensure consistency with contactInformation gap */
+  transition: color 0.3s ease;
+}
+
+.contactLink:hover {
+  color: #00bcd4;
+}
+
+/* Social Icons */
+.social {
+  display: flex;
+  gap: 18px;
+  margin-top: 18px;
+  padding: 0;
+  justify-content: flex-start; /* Align social icons to the left */
+}
+
+.social a {
+  font-size: 20px;
+  color: #bbb;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social a:hover {
+  color: #00bcd4;
+  transform: scale(1.2);
+}
+
+/* Responsive Design */
+
+/* Tablets and smaller desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .section .contactInformation {
+    font-size: 14px; /* Slightly smaller font for tablets */
+  }
+
+  .section .contactIcons {
+    font-size: 1.2rem; /* Slightly smaller icons */
+  }
+
+  .social {
+    gap: 16px; /* Reduce gap between social icons */
+  }
+
+  .social a {
+    font-size: 18px; /* Smaller social icons */
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .section {
+    padding: 0 12px; /* Tighter padding for mobile */
+  }
+
+  .section h3 {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  .section .contactInformation {
+    font-size: 13px; /* Smaller font for mobile */
+
+    gap: 6px; /* Tighter gap for mobile */
+  }
+
+  .section .contactIcons {
+    font-size: 1.1rem; /* Smaller icons for mobile */
+  }
+
+  .contactLink {
+    gap: 6px; /* Match contactInformation gap */
+  }
+
+  .social {
+    gap: 14px; /* Tighter gap for social icons */
+    margin-top: 14px;
+    /* Center social icons on mobile */
+  }
+
+  .social a {
+    font-size: 16px; /* Smaller social icons */
+  }
+}
+
+/* Very small devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .section {
+    padding: 0 8px; /* Minimal padding for very small screens */
+  }
+
+  .section h3 {
+    font-size: 1.3rem; /* Smaller heading */
+  }
+
+  .section .contactInformation {
+    font-size: 12px; /* Smallest font size */
+    /* Stack icon and text vertically */
+    /* Align to start for better readability */
+    gap: 4px;
+  }
+
+  .section .contactIcons {
+    font-size: 1rem; /* Smallest icon size */
+  }
+
+  .contactLink {
+    gap: 4px;
+  }
+
+  .social {
+    gap: 12px; /* Minimal gap for social icons */
+    justify-content: center;
+  }
+
+  .social a {
+    font-size: 14px; /* Smallest social icons */
+  }
+}
+
+/* Address / Location Button */
+.addressText {
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.getLocation {
+  background: linear-gradient(90deg, #6b5ecd, #25b09b);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3);
+}
+
+.getLocation:hover {
+  background: linear-gradient(90deg, #25b09b, #6b5ecd);
+  transform: translateY(-3px);
+}
+
+.locationIcon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Bottom Bar */
+.bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 13px;
+  color: #aaa;
+  letter-spacing: 0.3px;
+}
+
+/* Privacy Links */
+.privacyContainer {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.privacyContainer a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.privacyContainer a:hover {
+  color: #00bcd4;
+  text-decoration: underline;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+  .socialIcons{
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .section ul li,
+  .section .contactInformation {
+    justify-content: center;
+  }
+
+  .social {
+    justify-content: center;
+    
+  }
+
+  .getLocation {
+    margin: auto;
+  }
+}

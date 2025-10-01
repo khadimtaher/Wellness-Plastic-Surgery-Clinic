@@ -1,0 +1,103 @@
+/* BookingAppointment.module.css */
+
+/* Define CSS variables for reusability */
+:root {
+  --color-primary: #2563eb; /* blue-600 */
+  --color-text-dark: #0f172a; /* slate-900 */
+  --color-text-medium: #334155; /* slate-700 */
+  --color-text-light: #475569; /* slate-600 */
+  --color-background: #ffffff; /* white */
+  --color-background-light: #f8fafc; /* slate-50 */
+  --color-border: #e2e8f0; /* slate-200 */
+  --color-border-dashed: #cbd5e1; /* slate-300 */
+  --shadow-card: 0 6px 20px rgba(2, 6, 23, 0.05);
+  --gap: clamp(16px, 2.5vw, 28px);
+}
+
+/* Root wrapper */
+.bookingSection {
+  display: block;
+  width: 100%;
+  color: var(--color-text-dark);
+}
+
+/* Banner */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* Desktop pe bada rakha */
+  overflow: hidden;
+}
+
+.bannerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(60%) contrast(1.1);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+/* ✅ Fix: Hover effect works when hovering on .banner (not only img) */
+.banner:hover .bannerImg {
+  transform: scale(1.05);
+  filter: brightness(70%) contrast(1.2);
+}
+
+.bannerOverlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  text-align: center;
+  
+}
+
+.bannerHeading {
+  color: var(--color-background-light);
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin-bottom: clamp(10px, 1.5vw, 15px);
+    font-family: "El Messiri", sans-serif;
+  font-weight: 700;
+ 
+}
+
+.bannerSub {
+  font-size: clamp(1.1rem, 1.5vw, 1rem);
+  color: var(--color-background-light);
+  opacity: 0.95;
+
+}
+
+/* Content grid */
+.contentGrid {
+  width: min(1100px, 92%);
+  margin: clamp(16px, 3vw, 36px) auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+}
+/* Mobile screens */
+@media (max-width: 768px) {
+  .banner {
+    height: auto;
+  }
+
+  .bannerImg {
+    height: auto;
+    height: 40vh; /* ⚡ size aur bada kiya */
+    object-fit: cover; /* image poori jagah le aur balanced crop ho */
+  }
+
+  .bannerOverlay {
+    padding: 1rem;
+  }
+
+  .bannerHeading {
+    font-size: 2rem; /* heading bhi thodi badi */
+  }
+
+  .bannerSub {
+    font-size: 1.1rem;
+  }
+}

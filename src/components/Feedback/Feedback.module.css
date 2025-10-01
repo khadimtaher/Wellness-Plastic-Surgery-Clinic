@@ -1,0 +1,242 @@
+/* Feedback Section */
+.feedbackContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feedbackSection {
+  position: relative; /* Ensure relative positioning for slick-dots */
+}
+
+.heading {
+  font-family: "El Messiri", sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem); /* Responsive font size */
+  color: #222;
+  margin-bottom: clamp(20px, 3vw, 30px);
+  text-align: center;
+}
+
+.cardWrapper {
+  padding: 10px;
+  outline: none;
+}
+
+.card {
+  background: #fff;
+  padding: clamp(12px, 2vw, 20px);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  margin: clamp(10px, 2vw, 20px); /* Reduced margin to avoid overlap */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.profileRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.profileImg {
+  width: clamp(40px, 8vw, 60px);
+  height: clamp(40px, 8vw, 60px);
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.name {
+  font-size: clamp(0.95rem, 2vw, 1.2rem);
+  margin: 0;
+  color: #222;
+  font-family: "El Messiri", sans-serif;
+}
+
+.rating {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 5px;
+}
+
+.feedbackText {
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  color: #555;
+  line-height: 1.6;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+/* Carousel Dots */
+.slick-dots {
+  position: relative; /* Ensure dots are below the carousel */
+  bottom: 0; /* Reset any default positioning */
+  margin-top: clamp(20px, 3vw, 30px); /* Increased margin for spacing */
+  padding-bottom: 20px; /* Extra space below dots */
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.slick-dots li {
+  margin: 0 5px;
+}
+
+.slick-dots li button:before {
+  font-size: clamp(10px, 2vw, 12px);
+  color: #555;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ffc107;
+  opacity: 1;
+}
+
+/* Default Slide Spacing */
+.slick-slide {
+  padding: 0 clamp(5px, 1vw, 10px);
+}
+
+/* Slick Slider Container */
+.slick-slider {
+  padding-bottom: clamp(30px, 5vw, 50px); /* Ensure space for dots */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .feedbackContainer {
+    max-width: 900px;
+  }
+
+  .heading {
+    font-size: clamp(1.6rem, 3.5vw, 2rem);
+  }
+
+  .card {
+    min-height: 300px;
+    padding: clamp(10px, 1.8vw, 18px);
+    margin: clamp(8px, 1.5vw, 15px);
+  }
+
+  .profileImg {
+    width: clamp(40px, 7vw, 50px);
+    height: clamp(40px, 7vw, 50px);
+  }
+
+  .name {
+    font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  }
+
+  .feedbackText {
+    font-size: clamp(0.8rem, 1.4vw, 0.95rem);
+  }
+
+  .slick-dots {
+    margin-top: clamp(15px, 2.5vw, 25px);
+  }
+
+  .slick-slider {
+    padding-bottom: clamp(25px, 4vw, 40px);
+  }
+}
+
+@media (max-width: 768px) {
+  .feedbackContainer {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .cardWrapper {
+    padding: 0;
+  }
+
+  .card {
+    width: 90% !important; /* Center card on mobile */
+    margin: 0 auto;
+    padding: clamp(10px, 2vw, 15px);
+    min-height: 300px;
+  }
+
+  .slick-slide {
+    padding: 0 !important;
+  }
+
+  .slick-list {
+    overflow: visible !important; /* Prevent clipping */
+  }
+
+  .heading {
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
+  }
+
+  .profileImg {
+    width: clamp(35px, 6vw, 45px);
+    height: clamp(35px, 6vw, 45px);
+  }
+
+  .name {
+    font-size: clamp(0.85rem, 1.6vw, 1rem);
+  }
+
+  .feedbackText {
+    font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+  }
+
+  .slick-dots {
+    margin-top: clamp(12px, 2vw, 20px);
+    padding-bottom: 15px;
+  }
+
+  .slick-slider {
+    padding-bottom: clamp(20px, 3.5vw, 30px);
+  }
+}
+
+@media (max-width: 480px) {
+  .feedbackContainer {
+    padding: 0 5px;
+  }
+
+  .card {
+    width: 95% !important;
+    margin: 0 auto;
+    padding: clamp(8px, 1.5vw, 12px);
+    min-height: 260px;
+  }
+
+  .profileImg {
+    width: clamp(30px, 5vw, 40px);
+    height: clamp(30px, 5vw, 40px);
+  }
+
+  .name {
+    font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  }
+
+  .feedbackText {
+    font-size: clamp(0.75rem, 1.2vw, 0.85rem);
+    line-height: 1.5;
+  }
+
+  .slick-dots {
+    margin-top: clamp(10px, 1.8vw, 15px);
+  }
+
+  .slick-slider {
+    padding-bottom: clamp(15px, 3vw, 25px);
+  }
+}

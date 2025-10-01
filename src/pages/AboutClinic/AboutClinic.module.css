@@ -1,0 +1,854 @@
+.aboutClinic {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Banner Section */
+.bannerSection {
+  position: relative;
+  height: 90lvh;
+  background: #1a1a1a;
+  overflow: hidden;
+}
+
+.bannerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.bannerSection:hover .bannerImg {
+  transform: scale(1.05);
+  filter: brightness(70%) contrast(1.2);
+}
+
+.bannerOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); /* Dark layer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.bannerOverlay .h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin-bottom: clamp(10px, 1.5vw, 15px);
+  font-family: "El Messiri", sans-serif;
+  font-weight: 700;
+}
+
+.bannerOverlay p {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  max-width: 700px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+/* Section Container */
+.sectionContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* General Section Styling */
+.introSection,
+.valuesSection,
+.facilitySection,
+.doctorSection,
+.testimonialSection,
+.achievementSection,
+.contactSection {
+  padding: 2rem 1rem;
+}
+
+.introSection,
+.facilitySection,
+.doctorSection,
+.achievementSection {
+  background: #f5f5f5;
+}
+
+.valuesSection,
+.testimonialSection,
+.contactSection {
+  background: #fff;
+}
+
+.sectionContainer h2 {
+  grid-column: 1 / -1; /* Span across both columns */
+  font-size: clamp(24px, 5vw, 36px); /* Responsive font size */
+
+  font-weight: 700;
+  font-family: "El Messiri", sans-serif;
+  color: #444 !important;
+  text-align: center;
+  margin: 20px 0;
+  text-align: center;
+  margin-bottom: clamp(16px, 3vw, 24px);
+  line-height: 1.3;
+}
+
+.paragraph {
+  text-align: center;
+}
+
+.sectionContainer p {
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Values Section */
+.valuesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.valueCard {
+  background: linear-gradient(200deg, #6b5ecd, #25b09b);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in;
+}
+.valueCard:hover {
+  transform: translateY(-5px);
+}
+
+.valueCard h3 {
+  font-family: "El Messiri", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.valueCard p {
+  color: #ffffff;
+}
+
+/* Facility Section */
+.facilityGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.facilityCard {
+  background: linear-gradient(200deg, #6b5ecd, #25b09b);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in;
+}
+.facilityCard:hover {
+  transform: translateY(-5px);
+}
+
+.facilityCard h3 {
+  font-family: "El Messiri", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.facilityCard p {
+  color: #ffffff;
+}
+
+/* Mission Section */
+.missionGrid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.missionCard {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+.missionCard h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Doctor Section */
+/* Container / Section */
+.sectionContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 36px 20px;
+}
+
+.sectionContainer h2 {
+  font-family: "El Messiri", sans-serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  color: #2b1450; /* rich purple */
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.lead {
+  text-align: center;
+  color: #4b3b65;
+  max-width: 820px;
+  margin: 0.25rem auto 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.doctorSection {
+  padding: 4rem 1rem;
+  background-color: #f8f9fa;
+  text-align: center;
+
+  .sectionContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .paragraph {
+      font-size: clamp(0.9rem, 1.2vw, 1rem);
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .doctorGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+
+      margin-top: 2rem;
+
+      .doctorCard {
+        background: linear-gradient(180deg, #ffffff 0%, #fbfbff 100%);
+        border-radius: 14px;
+        box-shadow: 0 8px 22px rgba(20, 16, 40, 0.06);
+        padding: 20px;
+        transition: transform 220ms ease, box-shadow 220ms ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 550px; /* Prevents cards from becoming too wide */
+        width: 100%; /* Ensures card takes full available width within grid constraints */
+
+        &:hover,
+        &:focus-within {
+          box-shadow: 0 18px 40px rgba(20, 16, 40, 0.12);
+        }
+
+        .doctorImg {
+          width: 120px;
+          height: 120px;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 4px solid rgba(107, 78, 197, 0.08);
+          box-shadow: 0 6px 18px rgba(16, 12, 35, 0.06);
+          margin-bottom: 14px;
+        }
+
+        h3 {
+          font-size: 1.15rem;
+          color: #23123a;
+          margin: 6px 0 4px;
+          font-weight: 700;
+        }
+
+        p:first-of-type {
+          font-size: 0.95rem;
+          color: #6b557f;
+          margin-bottom: 12px;
+          font-weight: 500;
+        }
+
+        .doctorBio {
+          font-size: 0.95rem;
+          color: #555056;
+          line-height: 1.55;
+          margin-top: 8px;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sectionContainer {
+      h2 {
+        font-size: 2rem;
+      }
+
+      .paragraph {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+
+      .doctorGrid {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+        gap: 1.5rem;
+
+        .doctorCard {
+          max-width: 100%;
+          padding: 18px;
+          text-align: left;
+
+          .doctorImg {
+            width: 96px;
+            height: 96px;
+            margin-bottom: 10px;
+          }
+
+          h3 {
+            font-size: 1.05rem;
+          }
+
+          p:first-of-type {
+            font-size: 0.95rem;
+          }
+
+          .doctorBio {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    padding: 2rem 0.5rem;
+
+    .sectionContainer {
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      .paragraph {
+        font-size: 0.9rem;
+      }
+
+      .doctorGrid {
+        .doctorCard {
+          padding: 14px;
+
+          .doctorImg {
+            width: 84px;
+            height: 84px;
+          }
+
+          h3 {
+            font-size: 1rem;
+          }
+
+          p:first-of-type {
+            font-size: 0.9rem;
+          }
+
+          .doctorBio {
+            font-size: 0.88rem;
+            line-height: 1.45;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* grid layout of images gallary */
+.gallerySection {
+  padding: 60px 20px;
+  background: #fafafa;
+}
+
+.heading {
+  font-family: "El Messiri", sans-serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  color: #444; /* rich purple */
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+/* Masonry / Pinterest Style */
+.gallery {
+  columns: 3 250px; /* 3 columns min 250px each */
+  column-gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  display: block;
+  break-inside: avoid;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .gallery {
+    columns: 2 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    columns: 1 100%;
+  }
+}
+
+/* Accessibility & focus */
+.doctorCard:focus-within,
+.doctorCard a:focus {
+  outline: 3px solid rgba(107, 78, 197, 0.14);
+  outline-offset: 3px;
+}
+
+/* Optional Read More button style (if you implement JS toggle) */
+.readMoreBtn {
+  margin-top: 10px;
+  background: transparent;
+  border: none;
+  color: #6b4db0;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 0;
+  text-align: left;
+}
+.readMoreBtn:hover {
+  text-decoration: underline;
+}
+
+/* Testimonial Section */
+.testimonialGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonialCard {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonialText {
+  font-size: 1rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.testimonialAuthor {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Achievement Section */
+.achievementGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.achievementCard {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.achievementCard h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Contact Section */
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contactCard {
+  background: linear-gradient(200deg, #6b5ecd, #25b09b);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in;
+}
+.contactCard:hover {
+  transform: translateY(-5px);
+}
+.contactCard strong {
+  display: flex; /* Flexbox for icon + text */
+  align-items: center; /* Vertically center */
+  gap: 0.5rem; /* Spacing between icon & label */
+  font-size: 1.05rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.contactCard p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.icon {
+  flex-shrink: 0;
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+.link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* map emmbed section  */
+
+/* 🔹 Map Section wrapper */
+.mapSection {
+
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  padding: 28px;
+  max-width: 1200px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.mapSection h2 {
+  font-family: "El Messiri", sans-serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  color: #444; /* rich purple */
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.mapSubtitle {
+  font-size: 1rem;
+  color: #566;
+  margin: 0 0 4px;
+  font-weight: 600;
+}
+
+.address {
+  font-size: 0.98rem;
+  color: #666;
+  margin-bottom: 18px;
+}
+
+/* 🔹 Responsive Map container (keeps aspect ratio) */
+.mapWrap {
+  position: relative;
+  width: 100%;
+  /* Remove fixed height, use aspect ratio */
+  aspect-ratio: 16 / 9; 
+  height: auto;
+
+  border-radius: 14px;
+  overflow: hidden;
+  background: #e9eef4;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+  border: 2px solid #4a3ee6;
+}
+
+/* Fallback for browsers without aspect-ratio */
+@supports not (aspect-ratio: 16 / 9) {
+  .mapWrap {
+    height: auto;
+  }
+  .mapWrap::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; /* 16:9 */
+  }
+  .mapWrap > * {
+    position: absolute;
+    inset: 0;
+  }
+}
+
+.mapIframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+
+/* 🔹 Action buttons below map */
+.mapActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.mapBtn,
+.mapBtnSecondary {
+  padding: 10px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease,
+    color 0.25s ease;
+}
+
+/* Primary button (gradient) */
+.mapBtn {
+  margin-top: 20px;
+  background: linear-gradient(135deg, #4a3ee6, #23a896);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(35, 168, 150, 0.25);
+  transition: all 0.3s ease-in;
+}
+
+.mapBtn:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, #23a896, #4a3ee6);
+  box-shadow: 0 6px 16px rgba(35, 168, 150, 0.35);
+}
+
+/* Secondary button (outline) */
+.mapBtnSecondary {
+  margin-top: 20px;
+  background: #fff;
+  border: 1px solid #566;
+  color: #2b3a42;
+  transition: all 0.3s ease-in;
+}
+
+.mapBtnSecondary:hover {
+  background: #f3f6fb;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* 🔹 Responsive tweaks */
+@media (max-width: 991px) {
+  .mapSection {
+    padding: 22px;
+  }
+  .mapSection h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .mapSection {
+    padding: 16px;
+    margin: 24px auto;
+  }
+    .mapWrap {
+    aspect-ratio: 4 / 3; /* thoda zyada square jaisa */
+  }
+  .mapSection h2 {
+    font-size: 1.35rem;
+  }
+  .mapSubtitle,
+  .address {
+    font-size: 0.92rem;
+  }
+  .mapActions {
+    gap: 10px;
+  }
+  .mapBtn,
+  .mapBtnSecondary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+/* Responsive Design */
+@media (min-width: 768px) {
+
+  .bannerOverlay h1 {
+    font-size: 3.5rem;
+  }
+
+  .bannerOverlay p {
+    font-size: 1.5rem;
+  }
+
+  .valuesGrid,
+  .facilityGrid,
+  .missionGrid,
+  .doctorGrid,
+  .testimonialGrid,
+  .achievementGrid,
+  .contactGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bannerSection {
+    height: 600px;
+  }
+
+  .bannerOverlay h1 {
+    font-size: 4rem;
+  }
+
+  .bannerOverlay p {
+    font-size: 1.75rem;
+  }
+
+  .valuesGrid,
+  .facilityGrid,
+  .doctorGrid,
+  .testimonialGrid,
+  .achievementGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .missionGrid,
+  .contactGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sectionContainer {
+    padding: 0 2rem;
+  }
+}
+
+/* Additional Responsive Enhancements for Banner Image */
+
+/* Tablets and smaller desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .bannerSection {
+    height: 70lvh; /* Slightly reduce height for tablets */
+  }
+
+  .bannerOverlay .h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem); /* Adjust heading size */
+  }
+
+  .bannerOverlay p {
+    font-size: clamp(0.8rem, 1.8vw, 1rem);
+    max-width: 600px; /* Reduce max-width for text */
+    padding: 0 12px; /* Add padding for better readability */
+  }
+
+  .bannerImg {
+    object-position: center; /* Ensure image stays centered */
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .bannerSection {
+    height: 60lvh; /* Further reduce for mobile */
+   
+  }
+
+  .bannerOverlay {
+    padding: 10px; /* Add padding to overlay for touch-friendly spacing */
+    background: rgba(0, 0, 0, 0.4); /* Slightly darker overlay for better contrast on small screens */
+  }
+
+  .bannerOverlay .h1 {
+    font-size: clamp(1.2rem, 3.5vw, 2rem); /* Smaller heading */
+    margin-bottom: clamp(8px, 1vw, 12px);
+  }
+
+  .bannerOverlay p {
+    font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+    max-width: 90%; /* Responsive max-width */
+    padding: 0 8px;
+  }
+
+  .bannerSection:hover .bannerImg {
+    transform: none; /* Disable scale on mobile to avoid zoom issues */
+  }
+
+  .bannerImg {
+    transition: filter 0.6s ease; /* Keep filter transition but remove transform on mobile */
+  }
+}
+
+/* Very small devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .bannerSection {
+    height: 50lvh; /* Minimal height for very small screens */
+  }
+
+  .bannerOverlay .h1 {
+    font-size: clamp(1rem, 3vw, 1.5rem); /* Smallest heading size */
+    letter-spacing: 0.5px; /* Add letter-spacing for better readability */
+  }
+
+  .bannerOverlay p {
+    font-size: clamp(0.7rem, 2.5vw, 0.8rem);
+    line-height: 1.5; /* Slightly tighter line-height */
+    max-width: 95%;
+  }
+
+  .bannerOverlay {
+    padding: 8px;
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .bannerSection {
+    height: 80lvh; /* Adjust for landscape to avoid squishing */
+  }
+
+  .bannerOverlay .h1 {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+  }
+
+  .bannerOverlay p {
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
+    max-width: 80%;
+  }
+}

@@ -1,0 +1,48 @@
+.notFound {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background: #f8fafc; /* light background */
+}
+
+.image {
+  max-width: 400px;
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #1e293b; /* slate-800 */
+}
+
+.text {
+  font-size: 1rem;
+  max-width: 600px;
+  margin-bottom: 20px;
+  color: #475569; /* slate-600 */
+}
+
+.homeBtn {
+  padding: clamp(8px, 1.5vw, 10px) clamp(12px, 2vw, 16px);
+  border-radius: 10px;
+  background: linear-gradient(90deg, #6b5ecd, #25b09b);
+  color: #fff !important;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.homeBtn:hover {
+  transform: translateY(-5px);
+    background: linear-gradient(90deg,  #25b09b, #6b5ecd);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}

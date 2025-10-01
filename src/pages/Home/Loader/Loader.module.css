@@ -1,0 +1,201 @@
+.loaderWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6b5ecd 0%, #1a104d 100%);
+  flex-direction: column;
+  overflow: hidden;
+  position: relative; /* Positioning context for pseudo-elements */
+}
+
+/* Bubble Pseudo-Elements */
+.loaderWrapper::before,
+.loaderWrapper::after {
+  content: "";
+  position: absolute;
+  width: clamp(200px, 40vw, 400px); /* Default bubble size for large screens */
+  height: clamp(200px, 40vw, 400px);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+  border-radius: 50%;
+  z-index: 0;
+  animation: floatBubble 5s ease-in-out infinite alternate;
+}
+
+.loaderWrapper::before {
+  top: clamp(-50px, -8vw, -80px);
+  right: clamp(-50px, -8vw, -80px);
+}
+
+.loaderWrapper::after {
+  bottom: clamp(-50px, -8vw, -80px);
+  left: clamp(-50px, -8vw, -80px);
+}
+
+@keyframes floatBubble {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+  to {
+    transform: scale(1.2) translate(clamp(10px, 3vw, 20px), clamp(-10px, -3vw, -20px));
+  }
+}
+
+.imgbox {
+  width: clamp(100px, 18vw, 100px);
+  height: clamp(100px, 18vw, 100px);
+  border: clamp(2px, 0.6vw, 4px) solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: clamp(15px, 4vw, 25px);
+  z-index: 1; /* Above bubbles */
+}
+
+.zoomImage {
+  width: 100%;
+  height: auto;
+  animation: zoom 2.5s ease-in-out infinite;
+}
+
+@keyframes zoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.loader {
+  display: flex;
+  gap: clamp(8px, 2.5vw, 12px);
+  z-index: 1; /* Above bubbles */
+}
+
+.dot {
+  width: clamp(12px, 2.5vw, 10px);
+  height: clamp(12px, 2.5vw, 10px);
+  background: #25b09b;
+  border-radius: 50%;
+  animation: bounce 0.6s ease-in-out infinite;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(clamp(-8px, -2.5vw, -12px)); }
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+  .loaderWrapper::before,
+  .loaderWrapper::after {
+    width: clamp(250px, 35vw, 450px);
+    height: clamp(250px, 35vw, 450px);
+  }
+  .loaderWrapper::before {
+    top: clamp(-40px, -6vw, -60px);
+    right: clamp(-40px, -6vw, -60px);
+  }
+  .loaderWrapper::after {
+    bottom: clamp(-40px, -6vw, -60px);
+    left: clamp(-40px, -6vw, -60px);
+  }
+}
+
+@media (max-width: 768px) {
+  .loaderWrapper::before,
+  .loaderWrapper::after {
+    width: clamp(250px, 40vw, 350px); /* Increased bubble size */
+    height: clamp(250px, 40vw, 350px);
+  }
+  .loaderWrapper::before {
+    top: clamp(-40px, -6vw, -50px);
+    right: clamp(-40px, -6vw, -50px);
+  }
+  .loaderWrapper::after {
+    bottom: clamp(-40px, -6vw, -50px);
+    left: clamp(-40px, -6vw, -50px);
+  }
+  .imgbox {
+    width: clamp(90px, 16vw, 110px); /* Slightly larger */
+    height: clamp(90px, 16vw, 110px);
+    border-width: clamp(1.5px, 0.5vw, 2.5px);
+    margin-bottom: clamp(10px, 3vw, 15px);
+  }
+  .dot {
+    width: clamp(10px, 2.5vw, 15px); /* Slightly larger */
+    height: clamp(10px, 2.5vw, 15px);
+  }
+}
+
+@media (max-width: 480px) {
+  .loaderWrapper::before,
+  .loaderWrapper::after {
+    width: clamp(180px, 35vw, 250px); /* Increased bubble size */
+    height: clamp(180px, 35vw, 250px);
+  }
+  .loaderWrapper::before {
+    top: clamp(-30px, -5vw, -40px);
+    right: clamp(-30px, -5vw, -40px);
+  }
+  .loaderWrapper::after {
+    bottom: clamp(-30px, -5vw, -40px);
+    left: clamp(-30px, -5vw, -40px);
+  }
+  .imgbox {
+    width: clamp(70px, 14vw, 90px);
+    height: clamp(70px, 14vw, 90px);
+    border-width: clamp(1px, 0.4vw, 2px);
+    margin-bottom: clamp(8px, 2.5vw, 12px);
+  }
+  .dot {
+    width: clamp(9px, 2.2vw, 13px);
+    height: clamp(9px, 2.2vw, 13px);
+  }
+  @keyframes floatBubble {
+    from {
+      transform: scale(1) translate(0, 0);
+    }
+    to {
+      transform: scale(1.1) translate(clamp(5px, 1.5vw, 8px), clamp(-5px, -1.5vw, -8px));
+    }
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(clamp(-5px, -2vw, -8px)); }
+  }
+}
+
+@media (max-width: 320px) {
+  .loaderWrapper::before,
+  .loaderWrapper::after {
+    width: clamp(150px, 30vw, 200px); /* Increased bubble size */
+    height: clamp(150px, 30vw, 200px);
+  }
+  .loaderWrapper::before {
+    top: clamp(-20px, -4vw, -30px);
+    right: clamp(-20px, -4vw, -30px);
+  }
+  .loaderWrapper::after {
+    bottom: clamp(-20px, -4vw, -30px);
+    left: clamp(-20px, -4vw, -30px);
+  }
+  .imgbox {
+    width: clamp(60px, 12vw, 70px);
+    height: clamp(60px, 12vw, 70px);
+  }
+  .dot {
+    width: clamp(8px, 2vw, 12px);
+    height: clamp(8px, 2vw, 12px);
+  }
+}
