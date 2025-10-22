@@ -4,17 +4,17 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import bannerImg from "../../Images/BannerImages/aboutBanner.png";
 import Feedback from "../../components/Feedback/Feedback";
 import sumit from "../../Images/drImg.jpeg";
-import vrushali from "../../Images/drImg2.jpeg";
+import vrushali from "../../Images/drImg.jpeg";
 
-import _img1 from "../../Images/Hsptlgallery/_img1.jpeg";
-import _img2 from "../../Images/Hsptlgallery/_img2.jpeg";
-import _img3 from "../../Images/Hsptlgallery/_img3.jpeg";
-import _img4 from "../../Images/Hsptlgallery/_img4.jpeg";
-import _img5 from "../../Images/Hsptlgallery/_img5.jpeg";
-import _img6 from "../../Images/Hsptlgallery/_img6.jpeg";
-import _img7 from "../../Images/Hsptlgallery/_img7.jpeg";
-import _img8 from "../../Images/Hsptlgallery/_img8.jpeg";
-import _img9 from "../../Images/Hsptlgallery/_img9.jpeg";
+import _img1 from "../../Images/Hsptlgallery/img1.jpeg";
+import _img2 from "../../Images/Hsptlgallery/img2.jpeg";
+import _img3 from "../../Images/Hsptlgallery/img3.jpeg";
+import _img4 from "../../Images/Hsptlgallery/img4.jpeg";
+import _img5 from "../../Images/Hsptlgallery/img5.jpeg";
+import _img6 from "../../Images/Hsptlgallery/img6.jpeg";
+import _img7 from "../../Images/Hsptlgallery/img7.jpeg";
+import _img8 from "../../Images/Hsptlgallery/img8.jpeg";
+import _img9 from "../../Images/Hsptlgallery/img9.jpeg";
 
 function AboutClinic() {
   const images = [

@@ -76,7 +76,7 @@ import Feedback from "../../components/Feedback/Feedback";
 import AppointmentForm from "../../components/AppointmentForm/AppointmentForm";
 
 import drImage from "../../Images/drImg.jpeg";
-import drImage2 from "../../Images/drImg2.jpeg";
+import drImage2 from "../../Images/drimg2.jpeg";
 
 const slides = [
   {

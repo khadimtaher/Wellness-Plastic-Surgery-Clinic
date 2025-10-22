@@ -36,7 +36,7 @@ import hairTransplant from "../../../Images/BannerImages/hairTransplantBanner.jp
 import face_BA from "../../../Images/BannerImages/face_BA.jpg";
 import leg_BA from "../../../Images/BannerImages/leg_BA.jpg";
 import laserImg from "../../../Images/BannerImages/laserImg.jpeg";
-import reimpl from "../../../Images/BannerImages/reimpla.jpeg";
+import reimpl from "../../../Images/BannerImages/reImpla.jpeg";
 import avFistulaBanner from "../../../Images/BannerImages/avfistulaBanner.jpeg";
 import avFistulaImg from "../../../Images/BannerImages/avfistulaImg.jpg";
 import varicoseVeinsBanner from "../../../Images/BannerImages/varicoseVeinsBanner.jpeg";
