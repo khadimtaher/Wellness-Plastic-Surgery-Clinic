@@ -27,6 +27,7 @@ import liposuctionBA from "../../Images/BannerImages/liposuctionBA.jpg";
 import hairTransplantBA from "../../Images/BannerImages/hairTransplantBA.jpeg";
 
 // Multiple sections and images with links
+import { Link } from "react-router-dom";
 const sections = [
   {
     title: "Vascular Surgery Before & After",
@@ -111,14 +112,9 @@ function BeforeAfter() {
                   className={style.image}
                   loading="lazy"
                 />
-                <a
-                  href={item.link}
-                  className={style.viewBtn}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+              <Link to={item.link} className={style.viewBtn}>
                   View Details
-                </a>
+                </Link>
               </div>
             ))}
           </div>
